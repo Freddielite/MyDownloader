@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html>
-  <body style="background:black; color:white; text-align:center;">
-    <h1>My Downloader</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Elite Downloader</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <input id="link" placeholder="Paste link here" />
-    <br /><br />
-    <button onclick="go()">Download</button>
+  <div class="container">
+    <h1>Elite Downloader</h1>
+    <p class="subtitle">Download from YouTube, TikTok, Instagram & more</p>
 
-    <p id="result"></p>
+    <input
+      id="linkInput"
+      placeholder="Paste link here..."
+    />
 
-    <script>
-      function go() {
-        const link = document.getElementById("link").value;
-        document.getElementById("result").innerText =
-          "You pasted: " + link;
-      }
-    </script>
-  </body>
+    <select id="platform">
+      <option value="instagram">Instagram</option>
+      <option value="tiktok">TikTok</option>
+      <option value="twitter">X (Twitter)</option>
+      <option value="apple">Apple Music</option>
+      <option value="spotify">Spotify</option>
+      <option value="threads">Threads</option>
+      <option value="pinterest">Pinterest</option>
+      <option value="ytmp3">YouTube MP3</option>
+      <option value="ytmp4">YouTube MP4</option>
+    </select>
+
+    <button id="downloadBtn">Download</button>
+
+    <p id="status"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>

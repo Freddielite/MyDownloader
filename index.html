@@ -8,9 +8,18 @@
 <body style="background:black; color:white; text-align:center;">
     <h1>My Downloader</h1>
 
-    <input placeholder="Paste link here" />
+    <input id="link" placeholder="Paste link here" />
     <br /><br />
-    <button>Download</button>
+    <button onclick="go()">Download</button>
+
+    <p id="result"></p>
+
+    <script>
+      function go() {
+        const link = document.getElementById("link").value;
+        document.getElementById("result").innerText =
+          "You pasted: " + link;
+      }
+    </script>
   </body>
 </html>
-
